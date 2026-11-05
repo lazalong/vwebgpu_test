@@ -194,7 +194,7 @@ fn graphics_init(mut app App) {
 	future1 := vwebgpu.wgpu_instance_request_adapter(
 		app.instance, 
 		&options, // NULL for default options
-		vwebgpu.WGPURequestAdapterCallbackInfo(callback_info))
+		vwebgpu.WGPURequestAdapterCallbackInfo(callback_info)) // even without the cast compile fails
 
 	//wait_info := vwebgpu.WGPUFutureWaitInfo {
 	_ := vwebgpu.WGPUFutureWaitInfo {
